@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+-------------header-------------- 
+---------------------------------*/
+header {
+  padding: 1rem;
+  background-color: #cbd5e1;
+  position: relative;
+}
+
+header [alt="brand-logo"] {
+  height: 30px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .menu-check {
+  display: none;
+}
+
+header.bx-menu {
+  margin-left: auto;
+}
+
+header .search-group {
+  margin-inline: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: #f8fafc;
+}
+
+header .search--form {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+}
+
+header .search--btn {
+  border: none;
+  background-color: #f8fafc;
+  padding: 0.5rem;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+header .bx-menu::before {
+  font-size: 1.75rem;
+}
+
+header .bx-search-alt-2::before {
+  font-size: 1.2rem;
+}
+
+header ul {
+  position: absolute;
+  z-index: -1;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  background-color: #cbd5e1;
+  transition: all 600ms ease-in-out;
+}
+
+header ul li {
+  text-align: center;
+  list-style: none;
+  margin-block: 0.5rem;
+}
+
+header .menu-check:checked ~ ul {
+  top: -999px;
+}
